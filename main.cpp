@@ -11,6 +11,19 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-  cout << "hello from main!\n";
+int main()
+{
+    vector<double> v;
+    string filename = "";
+    string column = "";
+    cout << "enter a filename" << endl;
+    cin >> filename;
+    cout << "enter a column name" << endl;
+    cin >> column;
+    cout << "reading column " << column << " from " << filename;
+    v = extract_column(filename, column);
+    summarise(v);
+    cout << endl;
+    
+    
 }
